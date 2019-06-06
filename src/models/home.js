@@ -7,9 +7,6 @@ export default {
 
   subscriptions: {
     setup({ dispatch, history }) {
-      console.log('111111')
-      console.log(dispatch)
-      console.log(history)
       return history.listen(({ pathname }) => {
         if (pathname === '/home') {
           dispatch({
@@ -22,10 +19,6 @@ export default {
 
   effects: {
     *getUserInfoList({ payload = {} }, { call, put }) {
-      console.log(333333)
-      console.log(payload)
-      console.log(call)
-      console.log(put)
       try {
         // const res = yield call(projectsService.getAllProjects, payload)
         const res =

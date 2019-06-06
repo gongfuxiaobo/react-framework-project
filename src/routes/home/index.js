@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'dva'
 import styles from './index.less'
 import { Button, Icon } from 'antd'
+import { getMessage } from '../../services/home'
 
 class Home extends Component {
   constructor(props) {
@@ -12,11 +13,14 @@ class Home extends Component {
     }
   }
 
-  changeData = () => {
+  componentDidMount() {
+    this.getMessageList()
+  }
+
+  // 异步数据处理
+  changeModel = () => {
     const { dispatch } = this.props
-    console.log(444444)
-    console.log(this.props)
-    console.log(dispatch)
+
     dispatch({
       type: 'home/getUserInfoList',
       payload: {
@@ -27,8 +31,33 @@ class Home extends Component {
     })
   }
 
+  // 同步数据处理
+  changeData = () => {
+    const { dispatch } = this.props
+
+    dispatch({
+      type: 'home/getUserInfo',
+      payload: {
+        userInfo: {
+          id: 2,
+          name: 'admin2',
+          platform: 1
+        }
+      }
+    })
+  }
+
+  getMessageList = () => {
+    getMessage('')
+      .then(res => {
+        console.log(res)
+      })
+      .catch(res => {
+        console.log(res)
+      })
+  }
+
   render() {
-    console.log(this.props.home.userInfo)
     return (
       <div>
         <p className={styles.title}>你瞅啥{this.props.home.userInfo.name}</p>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, Switch, Redirect } from 'dva/router'
+import { Router, Route, Switch } from 'dva/router'
 import dynamic from 'dva/dynamic'
 import routers from './routes/index'
 

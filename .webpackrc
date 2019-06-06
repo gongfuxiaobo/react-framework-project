@@ -7,11 +7,19 @@
       "extraBabelPlugins": ["dva-hmr"],
       "proxy": {
         "/api": {
-          "target": "http://localhost:9000",
+          "target": "http://localhost:4000",
           "secure": false,
           "changeOrigin": true,
           "pathRewrite": {
             "^/api": ""
+          }
+        },
+        "/config": {
+          "target": "http://localhost:7000",
+          "secure": false,
+          "changeOrigin": true,
+          "pathRewrite": {
+            "^/config": ""
           }
         }
       }
