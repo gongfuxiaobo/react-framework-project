@@ -11,6 +11,14 @@ class Home1 extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextStates) {
+    if (this.state.status === nextStates.status) {
+      return false
+    } else {
+      return true
+    }
+  }
+
   render() {
     return (
       <div>
