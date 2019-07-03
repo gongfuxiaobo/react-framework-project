@@ -6,6 +6,10 @@ import { getMessage } from '../../services/home'
 import Title from '../../components/title/index'
 import BannerVideo from '../../assets/images/banner_video.jpg'
 import HomeVideo from '../../assets/medias/home_video.mp4'
+import Logistics1 from '../../assets/images/logistics_1.png'
+import Logistics2 from '../../assets/images/logistics_2.png'
+import Logistics3 from '../../assets/images/logistics_3.png'
+import LogisticsCloud from '../../assets/images/logistics_cloud.jpg'
 
 class Home extends Component {
   constructor(props) {
@@ -157,17 +161,158 @@ class Home extends Component {
             <p className={styles.activity_title}>头等舱</p>
             <p className={styles.activity_label}>最优质 最舒适</p>
             <p className={styles.activity_msg}>满足部分小康人群基本生活需求</p>
-            <a href="https://www.baidu.com" className={styles.activity_button}>
+            <a
+              href="https://www.baidu.com"
+              className={`${styles.activity_button} ${
+                styles.normal_transition
+              }`}
+            >
               查看详情 >
             </a>
           </div>
         </div>
         <div className={styles.logistics_box}>
           <p className={styles.logistics_title}>物流专区</p>
-          <div className={`${styles.logistics_list} ${styles.flex_box}`}>
-            <div className={`${styles.logistics_model} ${styles.flex}`}>1</div>
-            <div className={`${styles.logistics_model} ${styles.flex}`}>1</div>
-            <div className={`${styles.logistics_model} ${styles.flex}`}>1</div>
+          <div className={`${styles.logistics_list}`}>
+            <div className={styles.flex_box}>
+              <div className={`${styles.logistics_model} ${styles.flex}`}>
+                <img
+                  className={`${styles.logistics_image} ${
+                    styles.normal_transition
+                  }`}
+                  src={Logistics1}
+                  alt="Logistics1"
+                />
+                <div className={styles.logistics_cen}>
+                  <p
+                    className={`${styles.logistics_cen_title} ${
+                      styles.normal_transition
+                    }`}
+                  >
+                    智慧庄园
+                  </p>
+                  <p
+                    className={`${styles.logistics_cen_line} ${
+                      styles.normal_transition
+                    }`}
+                  >
+                    <span />
+                  </p>
+                  <p
+                    className={`${styles.logistics_cen_msg} ${
+                      styles.logistics_cen_loacltion
+                    } ${styles.normal_transition}`}
+                  >
+                    利用物联网、人工智能等科技服务进行园区信息化、智能化和网络化升级，让园区管理更加可视、安全和高效，让园区资产不断升值。链接更多共享资源，丰富园区生态，让租户更满意。
+                  </p>
+                  <a
+                    className={`${styles.logistics_cen_button} ${
+                      styles.logistics_cen_loacltion
+                    } ${styles.normal_transition}`}
+                  >
+                    查看详情 >
+                  </a>
+                </div>
+              </div>
+              <div className={`${styles.logistics_model} ${styles.flex}`}>
+                <img
+                  className={`${styles.logistics_image} ${
+                    styles.normal_transition
+                  }`}
+                  src={Logistics2}
+                  alt="Logistics2"
+                />
+                <div className={styles.logistics_cen}>
+                  <p
+                    className={`${styles.logistics_cen_title} ${
+                      styles.normal_transition
+                    }`}
+                  >
+                    新型能源
+                  </p>
+                  <p
+                    className={`${styles.logistics_cen_line} ${
+                      styles.normal_transition
+                    }`}
+                  >
+                    <span />
+                  </p>
+                  <p
+                    className={`${styles.logistics_cen_msg} ${
+                      styles.logistics_cen_loacltion
+                    } ${styles.normal_transition}`}
+                  >
+                    新型能源是集园区充电网络、光伏储能、新能源大数据为一体的新能源运力网络，从而将传统的服务、赋能、监控新能源运力，整合成最佳新能源综合解决方案。
+                  </p>
+                  <a
+                    className={`${styles.logistics_cen_button} ${
+                      styles.logistics_cen_loacltion
+                    } ${styles.normal_transition}`}
+                  >
+                    查看详情 >
+                  </a>
+                </div>
+              </div>
+              <div className={`${styles.logistics_model} ${styles.flex}`}>
+                <img
+                  className={`${styles.logistics_image} ${
+                    styles.normal_transition
+                  }`}
+                  src={Logistics3}
+                  alt="Logistics3"
+                />
+                <div className={styles.logistics_cen}>
+                  <p
+                    className={`${styles.logistics_cen_title} ${
+                      styles.normal_transition
+                    }`}
+                  >
+                    共享中心
+                  </p>
+                  <p
+                    className={`${styles.logistics_cen_line} ${
+                      styles.normal_transition
+                    }`}
+                  >
+                    <span />
+                  </p>
+                  <p
+                    className={`${styles.logistics_cen_msg} ${
+                      styles.logistics_cen_loacltion
+                    } ${styles.normal_transition}`}
+                  >
+                    将托盘、货架、叉车、物流分拣设备等运维融于物流枢纽中，并辐射相关周边物流货运产业及大型物流园区。实现设备的租赁、共享与运营服务。
+                  </p>
+                  <a
+                    className={`${styles.logistics_cen_button} ${
+                      styles.logistics_cen_loacltion
+                    } ${styles.normal_transition}`}
+                  >
+                    查看详情 >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.cloud_box}>
+          <img
+            className={`${styles.cloud_image} ${styles.normal_transition}`}
+            src={LogisticsCloud}
+            alt="LogisticsCloud"
+          />
+          <div className={styles.cloud_content}>
+            <p className={styles.cloud_title}>物流云平台</p>
+            <p className={styles.cloud_label}>云计算 大数据</p>
+            <p className={styles.cloud_msg}>
+              集合全面生态能力，提供丰富的物流数据
+            </p>
+            <a
+              href="https://www.baidu.com"
+              className={`${styles.cloud_button} ${styles.normal_transition}`}
+            >
+              查看详情 >
+            </a>
           </div>
         </div>
       </div>

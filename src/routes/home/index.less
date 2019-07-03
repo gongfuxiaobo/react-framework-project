@@ -6,9 +6,6 @@
     width: 100%;
     height: 700px;
     overflow: hidden;
-    .video {
-      margin-top: -120px;
-    }
     .video_text_box {
       position: absolute;
       left: 0;
@@ -93,6 +90,7 @@
         font-size: 16px;
         line-height: 26px;
         color: #333333;
+        overflow: hidden;
       }
       .view_model {
         margin-left: 30px;
@@ -148,7 +146,7 @@
         background: none;
         border-width: 1px;
         border-style: solid;
-        border-color: #fff;
+        border-color: #ffffff;
         background-color: none;
         display: inline-block;
       }
@@ -160,18 +158,149 @@
   }
   .logistics_box {
     width: 100%;
-    padding: 36px 0;
+    padding: 72px 0;
     .logistics_title {
       text-align: center;
       font-size: 54px;
-      line-height: 86px;
     }
     .logistics_list {
       width: 1200px;
-      margin: 0 auto;
+      margin: 72px auto 0;
+      .logistics_model {
+        position: relative;
+        width: 100%;
+        height: 518px;
+        overflow: hidden;
+        cursor: pointer;
+        .logistics_image {
+          width: 100%;
+          height: auto;
+          display: block;
+          transform: scale(1);
+        }
+        .logistics_cen {
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding: 36px;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0);
+          .logistics_cen_title {
+            width: 100%;
+            font-size: 34px;
+            color: #000000;
+          }
+          .logistics_cen_line {
+            width: 0px;
+            height: 0px;
+            border-color: rgba(255, 255, 255, 0);
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 2px;
+            margin: 80px 0;
+          }
+          .logistics_cen_msg {
+            width: 100%;
+            height: 192px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            overflow: hidden;
+          }
+          .logistics_cen_button {
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+            display: inline-block;
+          }
+          .logistics_cen_loacltion {
+            transform: translateY(284px);
+          }
+        }
+      }
+      .logistics_model:hover {
+        .logistics_image {
+          transform: scale(1.2);
+        }
+        .logistics_cen {
+          background-color: rgba(0, 0, 0, 0.5);
+          .logistics_cen_title {
+            color: #ffffff;
+          }
+          .logistics_cen_line {
+            width: 30px;
+            border-color: rgba(255, 255, 255, 1);
+          }
+          .logistics_cen_loacltion {
+            transform: translateY(0px);
+          }
+        }
+      }
+    }
+  }
+  .cloud_box {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    .cloud_image {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transform: scale(1);
+    }
+    .cloud_content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      .cloud_title {
+        font-size: 64px;
+        color: #ffffff;
+        line-height: 1.5;
+      }
+      .cloud_label {
+        font-size: 48px;
+        color: #ffffff;
+        line-height: 1.5;
+      }
+      .cloud_msg {
+        font-size: 32px;
+        color: #ffffff;
+        line-height: 1.5;
+      }
+      .cloud_button {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 32px;
+        margin-top: 30px;
+        font-size: 18px;
+        border-radius: 4px;
+        background: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ffffff;
+        background-color: none;
+        display: inline-block;
+      }
+      .cloud_button:hover {
+        border-color: transparent;
+        background-color: #ff0100;
+      }
+    }
+  }
+  .cloud_box:hover {
+    .cloud_image {
+      transform: scale(1.2);
     }
   }
 
+  .normal_transition {
+    transition: all 800ms ease;
+  }
   .flex_box {
     display: flex;
   }

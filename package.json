@@ -1,10 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "start": "cross-env PORT=5000 HOST=admin-dev.ca-b2b.com roadhog server",
+    "start": "cross-env PORT=5000 HOST=gongfuxiaobo.com roadhog server",
     "build": "roadhog build",
-    "lint": "eslint --ext .js src test",
-    "precommit": "npm run lint"
+    "lint": "eslint --ext .js src test"
   },
   "dependencies": {
     "antd": "^3.19.1",
